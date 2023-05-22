@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Mina', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+}
+main{
+    /* com flex um do lado do outo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    /* height para centralizar no meio da tela */
+    height: 100vh;
+    }
+    
+    button{
+        margin: 13px;
+        margin-left: 60px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+

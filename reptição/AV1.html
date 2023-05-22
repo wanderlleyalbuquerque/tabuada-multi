@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Programa tabuada</title>
+
+    <style>
+
+    </style>
+
+    <link rel="stylesheet" href="./css/styleav1.css">
+    <link rel="shortcut icon" href="./img/icone-tabuada.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mina&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <section>
+            <img src="./img/img.png" alt="">
+        </section>
+        <article>
+            <h1>Programa Tabuada</h1>
+            <p>
+                numero: <input type="text" id="inNumero">
+            </p>
+            <button type="button" id="btnMostrar">Mostrar Tabuada</button>
+            <hr>
+            <h2 id="outTabuada"></h2>
+        </article>
+    </main>
+
+    <script>
+           // Referencia de todos elementos necessarios
+
+           const inNumero = document.querySelector('#inNumero')
+        const btnMostrar = document.querySelector('#btnMostrar')
+        const outTabudada = document.querySelector('#outTabuada')
+
+        btnMostrar.addEventListener('click', ()=>{
+            let numero = Number(inNumero.value)
+            // console.log(typeof  numero)
+
+            if(numero === 0 || isNaN(numero)){
+                alert("Digite um número valido")
+                inNumero.focus()
+                return
+            }
+
+            let resposta = ''
+
+            for(let i = 1; i <= 10; i++){
+                resposta = `${resposta+numero} x ${i} = ${numero * i} <br>`
+            }
+
+            // outTabudada.textContent = `${resposta}`
+            outTabuada.innerHTML = `${resposta}`
+        })
+        
+    </script>
+</body>
+</html>
